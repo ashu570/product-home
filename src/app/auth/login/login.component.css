@@ -1,0 +1,28 @@
+form {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  mat-error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  button {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .navToSignup{
+    text-align: left;
+    padding: 20px 0;
+  }
+  .navToSignup>a{
+    text-decoration: none;
+    color: black;
+  }

@@ -1,0 +1,19 @@
+
+    <mat-card class="example-card" (click)="goToProd()">
+      <img mat-card-image src="{{prod.image}}" alt="Product image">
+      <mat-card-content>
+        <p>
+          <mat-card-title>{{prod.name}}</mat-card-title>
+        </p>
+        <p>
+          <mat-icon>label</mat-icon> Model: {{prod.model}}
+        </p>
+        <p>
+          <mat-icon>attach_money</mat-icon> Price: ${{prod.price}}
+        </p>
+        <p>
+          <mat-icon>star_rate</mat-icon> Rating: {{prod.rating}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+    
