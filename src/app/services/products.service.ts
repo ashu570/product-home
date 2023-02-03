@@ -9,7 +9,7 @@ export class ProductsService {
   constructor(private http : HttpClient) { }
 
   public getProds(){
-    return this.http.get("http://localhost:8080/products")
+    return this.http.get("https://prod-backend-65ib.onrender.com/products")
   }
   public getProdById(id : number){
     return this.http.get("http://localhost:8080/product/"+id.toString())
