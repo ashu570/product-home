@@ -46,6 +46,9 @@
       </mat-select>
     </mat-form-field>
   
-    <button mat-raised-button color="primary" [disabled]="!signupForm.valid" (click)="submit()">Sign Up</button>
+    <button mat-raised-button color="primary" [disabled]="!signupForm.valid" (click)="submit()">
+      <ng-container *ngIf="!spinning">Sign Up</ng-container>
+      <mat-spinner diameter="25" *ngIf="spinning"></mat-spinner>
+    </button>
   </form>
   

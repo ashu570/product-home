@@ -9,7 +9,10 @@ form {
   }
   
   button {
-    width: 150px;
+    width: 100%;
     margin-top: 20px;
+  }
+  mat-spinner ::ng-deep circle {
+    stroke:white !important;
   }
   

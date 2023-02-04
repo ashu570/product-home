@@ -26,3 +26,6 @@ form {
     text-decoration: none;
     color: black;
   }
+  mat-spinner ::ng-deep circle{
+    stroke: #FFFFFF !important;
+  }

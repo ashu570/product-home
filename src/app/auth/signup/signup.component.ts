@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
+  spinning : boolean = false;
 
 constructor(private formBuilder: FormBuilder, private authService : AuthService, private router : Router) { }
 
@@ -30,13 +31,18 @@ checkPasswords(group: FormGroup) {
 }
 submit(){
   if(this.signupForm.valid){
+    this.spinning = true;
     delete this.signupForm.value.confirmPassword;
     this.authService.signup(this.signupForm.value).subscribe(
       {
         next : ()=>{
+          this.spinning = false;
           this.router.navigateByUrl("/login")
         },
-        error :()=>console.log
+        error :()=>{
+          this.spinning = false;
+          alert("Unable to add user");
+        }
       }
     )
   }

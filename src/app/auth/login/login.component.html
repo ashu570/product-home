@@ -16,7 +16,10 @@
       </mat-error>
     </mat-form-field>
   
-    <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="onSubmit()">Submit</button>
+    <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="onSubmit()">
+      <ng-container *ngIf="!spinning">Submit</ng-container>
+        <mat-spinner diameter="25" *ngIf="spinning"></mat-spinner>
+    </button>
     <div class="navToSignup">
       <a routerLink="/signup">Not a user ? Sign up</a>
     </div>
