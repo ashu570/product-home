@@ -12,6 +12,6 @@ export class ProductsService {
     return this.http.get("https://prod-backend-65ib.onrender.com/products")
   }
   public getProdById(id : number){
-    return this.http.get("http://localhost:8080/product/"+id.toString())
+    return this.http.get("https://prod-backend-65ib.onrender.com/product/"+id.toString())
   }
 }
